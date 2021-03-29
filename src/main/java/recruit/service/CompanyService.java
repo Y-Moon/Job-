@@ -1,9 +1,11 @@
 package recruit.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import recruit.entity.CompanyCardEntity;
-import recruit.employ.mapper.CompanyMapper;
+import recruit.repository.CompanyCardRepository;
 
 /**
  * @author w
@@ -11,8 +13,8 @@ import recruit.employ.mapper.CompanyMapper;
 @Service
 public class CompanyService {
     @Autowired
-    private CompanyMapper companyMapper;
-    public CompanyCardEntity[] queryAll(){
-        return companyMapper.queryAllCompanyCard();
+    private CompanyCardRepository companyRepository;
+    public List<CompanyCardEntity> queryAll(){
+        return companyRepository.findAll();
     }
 }

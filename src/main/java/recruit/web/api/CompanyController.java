@@ -1,13 +1,16 @@
 package recruit.web.api;
+
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import recruit.entity.CompanyCardEntity;
 import recruit.service.CompanyService;
-
-import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
 
 /**
  * @author w
@@ -17,12 +20,10 @@ import java.util.HashMap;
 public class CompanyController {
     @Autowired
     private CompanyService companyService;
+
     @GetMapping("cardList")
-    public CompanyCardEntity[] cardList(HashMap<String,String> requestHead) throws UnsupportedEncodingException {
+    public List<CompanyCardEntity> cardList(HashMap<String, String> requestHead) throws UnsupportedEncodingException {
         System.out.println(requestHead);
-        CompanyCardEntity[] companyCardEntities = companyService.queryAll();
-        String pic = companyCardEntities[0].getPic();
-//        System.out.println(pic);
         return companyService.queryAll();
     }
 }

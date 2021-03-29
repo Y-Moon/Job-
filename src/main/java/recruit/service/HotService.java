@@ -1,9 +1,11 @@
 package recruit.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import recruit.entity.HotCardEntity;
-import recruit.employ.mapper.HotMapper;
+import recruit.repository.HotCardRepository;
 
 /**
  * @author w
@@ -11,8 +13,8 @@ import recruit.employ.mapper.HotMapper;
 @Service
 public class HotService {
     @Autowired
-    private HotMapper hotMapper;
-    public HotCardEntity[] queryAll(){
-        return hotMapper.queryAllHotCard();
+    private HotCardRepository hotRepository;
+    public List<HotCardEntity> queryAll(){
+        return hotRepository.findAll();
     }
 }
