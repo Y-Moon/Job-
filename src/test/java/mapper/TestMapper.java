@@ -13,5 +13,6 @@ public class TestMapper {
         DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String format = dateFormat.format(date);
         System.out.println(format);
+        System.out.println("test");
     }
 }
