@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @author 王泽强
+ * @author 吴
  */
 @Entity
 @Table(name = "tbl_company_card")
@@ -23,7 +23,7 @@ public class CompanyCardEntity {
 
     @Id
     @GeneratedValue
-    private Long di;
+    private Long id;
     private String pic;
     private String name;
     private String introduce;
@@ -36,5 +36,7 @@ public class CompanyCardEntity {
      * 简历处理率
      */
     private String handle;
+    private String address;
+    private String website;
 
 }

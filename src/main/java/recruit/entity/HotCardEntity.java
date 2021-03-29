@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * @author w
+ * @author 吴
  */
 @Entity
 @Table(name = "tbl_hot_card")

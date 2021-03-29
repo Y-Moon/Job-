@@ -14,7 +14,7 @@ import recruit.service.HotService;
 @RequestMapping("employPage/hot")
 public class HotController {
     @Autowired
-    HotService hotService;
+    private HotService hotService;
     @GetMapping("cardList")
     public List<HotCardEntity> getHotCardList(String hot){
         System.out.println(hot);
