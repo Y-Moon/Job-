@@ -9,11 +9,13 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 repositories {
-    maven { url 'https://maven.aliyun.com/repository/public/'}
+    maven { url 'https://maven.aliyun.com/repository/public/' }
 }
+
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
+
 dependencies {
     testImplementation 'junit:junit:4.13'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

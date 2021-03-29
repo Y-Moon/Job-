@@ -1,5 +1,7 @@
 package recruit.web.api;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import recruit.entity.HotCardEntity;
@@ -14,7 +16,7 @@ public class HotController {
     @Autowired
     HotService hotService;
     @GetMapping("cardList")
-    public HotCardEntity[] getHotCardList(String hot){
+    public List<HotCardEntity> getHotCardList(String hot){
         System.out.println(hot);
         return hotService.queryAll();
     }
