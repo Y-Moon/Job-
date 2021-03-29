@@ -1,22 +1,20 @@
 package recruit;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.Import;
+import recruit.employ.mapper.CompanyMapper;
 
 /**
- * @author 王泽强
+ * @author w
  * email 13327488530@163.com
  * 有问题请发邮件
  */
-@RestController
 @EnableAutoConfiguration
+@Import(SpringConfiguration.class)
+@MapperScan(basePackageClasses = CompanyMapper.class)
 public class Recruit {
-    @RequestMapping("/")
-    String home() {
-        return "Hello World!";
-    }
     public static void main(String[] args) {
         SpringApplication.run(Recruit.class, args);
     }
