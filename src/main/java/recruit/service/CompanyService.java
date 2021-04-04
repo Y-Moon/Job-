@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import recruit.entity.CompanyCardEntity;
-import recruit.repository.CompanyCardRepository;
+import recruit.entity.base.CompanyEntity;
+import recruit.repository.CompanyRepository;
 
 /**
  * @author w
@@ -13,8 +13,8 @@ import recruit.repository.CompanyCardRepository;
 @Service
 public class CompanyService {
     @Autowired
-    private CompanyCardRepository companyRepository;
-    public List<CompanyCardEntity> queryAll(){
+    private CompanyRepository companyRepository;
+    public List<CompanyEntity> queryAll(){
         return companyRepository.findAll();
     }
 }

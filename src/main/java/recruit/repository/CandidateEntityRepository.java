@@ -2,7 +2,7 @@ package recruit.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import recruit.entity.CandidateEntity;
+import recruit.entity.base.CandidateEntity;
 
 /**
  * @author w

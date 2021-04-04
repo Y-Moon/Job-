@@ -1,20 +1,19 @@
-package recruit.web.api;
+package recruit.web.api.company;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import recruit.entity.CandidateEntity;
+import recruit.entity.base.CandidateEntity;
 import recruit.service.CandidateService;
 
-import java.util.Date;
 import java.util.List;
 
 /**
  * @author w
  */
 @RestController
-@RequestMapping("company/candidate")
+@RequestMapping("company")
 public class CandidateController {
     @Autowired
     private CandidateService candidateService;

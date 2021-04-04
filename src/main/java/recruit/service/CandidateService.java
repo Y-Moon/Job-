@@ -2,7 +2,7 @@ package recruit.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import recruit.entity.CandidateEntity;
+import recruit.entity.base.CandidateEntity;
 import recruit.repository.CandidateEntityRepository;
 
 import java.util.List;
