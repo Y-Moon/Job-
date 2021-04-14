@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import recruit.entity.base.CompanyEntity;
-import recruit.repository.CompanyRepository;
+import recruit.entity.table.CompanyRoleEntity;
+import recruit.repository.CompanyRoleRepository;
 
 /**
  * @author w
@@ -13,8 +13,8 @@ import recruit.repository.CompanyRepository;
 @Service
 public class CompanyService {
     @Autowired
-    private CompanyRepository companyRepository;
-    public List<CompanyEntity> queryAll(){
-        return companyRepository.findAll();
+    private CompanyRoleRepository companyRoleRepository;
+    public List<CompanyRoleEntity> queryAll(){
+        return companyRoleRepository.findAll();
     }
 }

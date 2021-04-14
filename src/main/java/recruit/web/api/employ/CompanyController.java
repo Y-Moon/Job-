@@ -1,6 +1,5 @@
 package recruit.web.api.employ;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import recruit.entity.base.CompanyEntity;
+import recruit.entity.table.CompanyRoleEntity;
 import recruit.service.CompanyService;
 
 /**
@@ -22,7 +21,7 @@ public class CompanyController {
     private CompanyService companyService;
 
     @GetMapping("companyList")
-    public List<CompanyEntity> cardList(Map<String, String> requestHead) throws UnsupportedEncodingException {
+    public List<CompanyRoleEntity> cardList(Map<String, String> requestHead)  {
         System.out.println(requestHead);
         return companyService.queryAll();
     }
