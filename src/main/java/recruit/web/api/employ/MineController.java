@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import recruit.entity.table.UserRoleEntity;
 import recruit.service.MineService;
-
 import java.io.IOException;
 import java.nio.file.Path;
 
@@ -46,8 +45,8 @@ public class MineController {
     }
 
     @GetMapping("recruit")
-    public String getRecruit(@RequestParam("username") String username){
+    public String getRecruit(@RequestParam("username") String username) {
         UserRoleEntity user = mineService.getUser(username);
-        return user.getRecruit()==null?"":user.getRecruit();
+        return user.getRecruit() == null ? "" : user.getRecruit();
     }
 }
